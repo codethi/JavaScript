@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>        
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div class="msg" >Clique em mim</div>
+
+    <script>
+        //window.document.write('Olá Mundo <br>')
+        //window.document.write(window.document.charset)
+
+        var d = document.getElementById('msg')
+        var corpo = document.body
+        var p1 = document.getElementsByTagName('p')[1] //entre [] vai o paragrafo que eu quero pegar
+        document.write('Esse é o 1° paragrafo ' + p1.innerText + '<br>') // tras apenas o texto
+        document.write('Esse é o 1° paragrafo ' + p1.innerHTML) // tras toda formatação do HTML
+
+        //d.style.background = 'green'
+        //d.innerText = 'Estou aguardando'
+
+        document.querySelector('div#msg').style.color = 'blue' //Quando for por ID
+        document.querySelector('div.msg').style.color = 'blue' //Quando for por Classe 
+
+
+        //corpo.style.background = 'black'
+        //p1.style.color = 'blue'
+
+
+    </script>
+</body>
+</html>

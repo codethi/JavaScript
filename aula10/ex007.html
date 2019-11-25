@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body{
+            font: normal 18pt Arial;
+        }
+        input{
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        #res{
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Somando valores</h1>
+
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <p id="res">0.0</p>
+
+    <script>
+
+            var tn1 = document.getElementById('txtn1')
+            var tn2 = document.querySelector('#txtn2')
+            var res = document.querySelector('#res')
+       
+        function somar(){
+
+            //Tudo que vem em uma caixa de texto é String, por isso preciso converter para number:
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1+n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é: <strong>${s}</strong>`
+        }
+    </script>
+
+</body>
+</html>
